@@ -1,6 +1,0 @@
-D:\z_workspace\TreeTraversal\obj\Debug\TreeTraversal.csprojResolveAssemblyReference.cache
-D:\z_workspace\TreeTraversal\bin\Debug\TreeTraversal.exe.config
-D:\z_workspace\TreeTraversal\bin\Debug\TreeTraversal.exe
-D:\z_workspace\TreeTraversal\bin\Debug\TreeTraversal.pdb
-D:\z_workspace\TreeTraversal\obj\Debug\TreeTraversal.exe
-D:\z_workspace\TreeTraversal\obj\Debug\TreeTraversal.pdb

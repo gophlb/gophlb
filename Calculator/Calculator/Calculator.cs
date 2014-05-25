@@ -16,7 +16,16 @@ namespace Calculator
 		};
 		
 		
-		public static double Calculate(Node currentNode)
+		
+		public static double Calculate(string expression)
+		{
+			TreeBuilder tb = new TreeBuilder();
+			Node tree = tb.BuildFromExpression(expression);
+			return Calculator.Calculate(tree);
+		}
+		
+		
+		private static double Calculate(Node currentNode)
 		{
 			if (currentNode.Type == Node.NodeTypes.Operator)
 			{

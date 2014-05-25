@@ -25,10 +25,8 @@ namespace Calculator
 		
 		public static void CalculateExpression(string expressionString, double expectedResult)
 		{
-			TreeBuilder tb = new TreeBuilder();
-			Node tree = tb.BuildFromExpression(expressionString);
-			double result = Calculator.Calculate(tree);
-			string treeDump = tb.Dump(tree, "    ");
+			double result = Calculator.Calculate(expressionString);
+			string treeDump = new TreeBuilder().Dump(expressionString);
 			
 			
 			Console.WriteLine("  Expression = " + expressionString);

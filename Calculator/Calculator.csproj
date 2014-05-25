@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="Calculator\Calculator.cs" />
     <Compile Include="Calculator\Node.cs" />
-    <Compile Include="Calculator\Operations.cs" />
     <Compile Include="Calculator\TreeBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

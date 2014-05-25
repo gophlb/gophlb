@@ -44,7 +44,15 @@ namespace Calculator
 		}
 
 
-		public string Dump(Node currentNode, string tab)
+		public string Dump(string expression)
+		{
+			Node tree = BuildFromExpression(expression);
+			
+			return Dump(tree, "    ");
+		}
+		
+		
+		private string Dump(Node currentNode, string tab)
 		{
 			if (currentNode.Type == Node.NodeTypes.Operator)
 			{

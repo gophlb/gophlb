@@ -9,11 +9,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TreeTraversal")]
+[assembly: AssemblyTitle("Calculator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TreeTraversal")]
+[assembly: AssemblyProduct("Calculator")]
 [assembly: AssemblyCopyright("Copyright 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -18,10 +18,10 @@ namespace Calculator
 		private Node BuildFromTokens(Node currentNode, List<string> tokens)
 		{
 			// Operation
-			if (Operations.OperationsDictionary.ContainsKey(tokens[0]))
+			if (Calculator.OperationsDictionary.ContainsKey(tokens[0]))
 			{
 				currentNode.Type = Node.NodeTypes.Operator;
-				currentNode.Operation = Operations.OperationsDictionary[tokens[0]];
+				currentNode.Operation = Calculator.OperationsDictionary[tokens[0]];
 				currentNode.OperationSymbol = tokens[0];
 				
 				currentNode.Children = new List<Node>();

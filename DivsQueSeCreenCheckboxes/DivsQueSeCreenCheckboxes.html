@@ -1,0 +1,175 @@
+﻿<html>
+	<head>
+		<style>
+			.grupoDiv{
+				padding: 28px;
+				clear: both;
+				margin: 12px;
+			}
+			
+			.cabeceraGrupoDiv{
+				color: #FFF;
+			}
+			
+				.cabeceraGrupoDiv input{
+					border: 1px solid #FFF;
+					background-color: transparent;
+					padding-left: 5px;
+					color: #FFF;
+				}
+			
+			.buttonTile{
+				background-color: rgba(0, 0, 0, 0.1);
+				border: 3px solid #FFF;
+				width: 150px;
+				cursor: pointer;
+				float: left;
+				padding: 28px;
+				margin: 12px;
+				position: relative;
+				display: inline;
+				text-align: center;
+			}
+				.buttonTile span {
+					color: #FFF;
+					display: inline-block;
+				}
+			
+			.buttonTileSelected{
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+			
+			body{
+				background: url('http://cdn.designinstruct.com/files/606-free-landscape-photos/free-landscape-photo-02.jpg');
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				background-color: #3371A2;
+			}
+			
+			input{
+				width: 640px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="stepGrupo1" class="grupoDiv">
+			<div class="cabeceraGrupoDiv">Grupo 1 <input type="text" id="inputGrupo1" name="inputGrupo1" value="" /></div>
+			
+			<div id="grupo1Opcion1Div" data-val="g1o1" data-input-rel="#inputGrupo1" data-grupo="Grupo1" class="buttonTile" onclick="onClickG1O1(this); return false;">
+				<span>Grupo 1 Opción 1</span>
+			</div>
+
+			<div id="grupo1Opcion2Div" data-val="g1o2" data-input-rel="#inputGrupo1" data-grupo="Grupo1" class="buttonTile" onclick="onClickG1O2(this); return false;">
+				<span>Grupo 1 Opción 2</span>
+			</div>
+		</div>
+
+		<div id="stepGrupo2" class="grupoDiv">
+			<div class="cabeceraGrupoDiv">Grupo 2 <input type="text" id="inputGrupo2" name="inputGrupo2" value="" /></div>
+			
+			<div id="grupo2Opcion1Div" data-val="g2o1" data-input-rel="#inputGrupo2" data-grupo="Grupo2" class="buttonTile" onclick="onClickG2O1(this); return false;">
+				<span>Grupo 2 Opción 1</span>
+			</div>
+			
+			<div id="grupo2Opcion2Div" data-val="g2o2" data-input-rel="#inputGrupo2" data-grupo="Grupo2" class="buttonTile" onclick="onClickG2O2(this); return false;">
+				<span>Grupo 2 Opción 2</span>
+			</div>
+			
+			<div id="grupo2Opcion3Div" data-val="g2o3" data-input-rel="#inputGrupo2" data-grupo="Grupo2" class="buttonTile" onclick="onClickG2O3(this); return false;">
+				<span>Grupo 2 Opción 3</span>
+			</div>
+		</div>
+
+
+
+
+
+			
+			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			var inputValues = {};
+			
+			
+			function onClickG1O1(obj) {
+				//Awesome stuff particular de este botón.
+				onClickButtonTile(obj);
+			}
+
+			function onClickG1O2(obj) {
+				//Awesome stuff particular de este botón.
+				onClickButtonTile(obj);
+			}
+
+			function onClickG2O1(obj) {
+				//Awesome stuff particular de este botón.
+				onClickButtonTile(obj);
+			}
+
+			function onClickG2O2(obj) {
+				//Awesome stuff particular de este botón.
+				onClickButtonTile(obj);
+			}
+
+			function onClickG2O3(obj) {
+				//Awesome stuff particular de este botón.
+				onClickButtonTile(obj);
+			}
+
+			
+			function onClickButtonTile(obj) {
+				switchState(obj);
+
+				//función que se llamaría, por ejemplo, al hacer el serialize del formulario.
+				getInputValues();				
+				
+				//some other magic stuff
+			}
+			
+			
+			function switchState(obj){
+				var activeState = 0;
+				
+				if ($(obj).hasClass("buttonTileSelected")){
+					$(obj).removeClass("buttonTileSelected");
+					activeState = 0;
+				}
+				else{
+					$(obj).addClass("buttonTileSelected");	
+					activeState = 1;
+				}
+								
+				var idInput = $(obj).attr("data-input-rel");
+				var idObj = $(obj).attr("id");
+				
+				if (!inputValues[idInput]) { inputValues[idInput] = {}; }
+				inputValues[idInput][idObj] = activeState;
+			}
+			
+			
+			function getInputValues(){
+				for (var idInput in inputValues){
+					var inputContent = "";
+					var inputName = $(idInput).attr("name");					
+					var divButtonStates = inputValues[idInput];
+					
+					for (var idDivButton in divButtonStates){
+						var inputVal = $("#" + idDivButton).attr("data-val");
+						
+						var state = divButtonStates[idDivButton];
+						
+						if (state == 1){
+							inputContent += "&" + inputName + "=" + inputVal;
+						}
+					}
+					
+					$(idInput).val(inputContent);
+				}	
+			}
+			
+		</script>
+	</body>
+</html>

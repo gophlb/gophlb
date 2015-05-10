@@ -1,0 +1,44 @@
+.select .labels{
+	border: 1px solid #dedede;
+	width: 150px;
+	clear: both;
+}
+
+.items{
+	dispay: inline-block;
+	position: relative;
+	width: 100%;
+}
+
+
+.droppable{
+	display: none;
+	border: 1px solid #dedede;
+	width: 80%;
+	clear: both;
+	height: 200px;
+	overflow-y: auto;
+}
+
+.multiselectitem{
+	float: left;
+	display: inline;
+	margin: 5px;
+	width: 250px;
+}
+
+	.multiselectitem span{
+		
+	}
+
+.filteredItems, .unfilteredItems{
+	clear: both;
+	width: 100%;
+	position: relative;
+	display: inline-block;
+}
+
+.filteredItems div{
+	background-color: #f00;
+	color: #000;
+}

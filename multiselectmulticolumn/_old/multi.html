@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/multiselectmulticolumn.css">
+	</head>
+	
+	<body>
+		<input type="text" id="multi1"/>
+		<input type="text" id="multi2"/>
+<!--	
+		<div class="select multiselectmulticolumn">
+			<div class="labels">0 elementos seleccionados</div>	
+			<div class="droppable">
+				<div class="buscador">
+					<input type="text" id="buscador" class="buscador" onkeyup="search();"/>
+					<input type="button" id="selectAll" onclick="selectAll(); return false;" value="Seleccionar todo"/>
+					<input type="button" id="selectFiltered" onclick="selectFiltered(); return false;" value="Seleccionar la búsqueda"/>
+					<input type="button" id="deselectAll" onclick="deselectAll(); return false;" value="Deseleccionar todo"/>
+				</div>
+				<div class="items">
+					<div id="filteredItems" class="filteredItems"></div>
+					<div id="unfilteredItems" class="unfilteredItems"></div>
+				</div>
+			</div>	
+		</div>
+-->		
+		
+
+
+		<script src="js/jquery-2.1.3.min.js"></script>
+		<script src="js/multiselectmulticolumn.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#multi1").multicolselect();
+				$("#multi2").multicolselect();
+			});
+		</script>
+		
+	</body>
+
+
+</html>

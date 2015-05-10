@@ -1,0 +1,67 @@
+.select .labels{
+	border: 1px solid #dedede;
+	width: 250px;
+	clear: both;
+	height: 25px;
+	padding: 10px;	
+	cursor: pointer;
+}
+
+.items{
+	dispay: inline-block;
+	position: relative;
+	width: 100%;
+}
+
+.droppable{
+	display: none;
+	border: 1px solid #dedede;
+	width: 80%;
+	clear: both;
+	height: 200px;
+	overflow-y: auto;
+	margin-top: -1px;
+	padding: 5px;
+}
+
+.buscadorDiv{
+	padding: 5px;
+}
+
+.buscadorDiv .buscador{
+	width: 250px;
+	height: 30px;
+	padding-left: 5px;
+}
+
+.multiselectitem{
+	float: left;
+	display: inline;
+	margin: 5px;
+	width: 250px;
+	padding: 5px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+	.multiselectitem span{
+		padding-left: 5px;
+	}
+
+.filteredItems, .unfilteredItems{
+	clear: both;
+	width: 100%;
+	position: relative;
+	display: inline-block;
+}
+
+.filteredItems div{
+	background-color: #f00;
+	color: #000;
+}
+
+.unfilteredItems div{
+	background-color: #dedede;
+	color: #000;
+}
